@@ -1,0 +1,35 @@
+Get http://localhost:8080/bosses HTTP/1.1
+
+###
+GET http://localhost:8080/bosses/63deacca1feeecb016ec5a43 HTTP/1.1
+
+###
+Post http://localhost:8080/bosses HTTP/1.1
+Content-Type:  application/json
+
+{
+    "Name":"Tim",
+    "Strengths":"Tall",
+    "Weakneses":"Thin",
+    "AttackType":"Talk",
+    "Parryable":"True",
+    "StanceBreakable":"True",
+    "Critical":"True"
+}
+
+###
+PUT http://localhost:8080/bosses/63deacca1feeecb016ec5a43 HTTP/1.1
+Content-Type: application/json
+
+{
+    "Name":"Tim",
+    "Strengths":"Tiny",
+    "Weakneses":"Thick",
+    "AttackType":"Tell",
+    "Parryable":"True",
+    "StanceBreakable":"True",
+    "Critical":"True"
+}
+
+###
+DELETE http://localhost:8080/bosses/63deacca1feeecb016ec5a43 HTTP/1.1

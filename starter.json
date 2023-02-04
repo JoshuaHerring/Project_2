@@ -1,0 +1,9 @@
+[{
+    "Name":"Godrick",
+    "Strengths": ["Holy"],
+    "Weakneses": ["Standard", "Slash", "Strike", "Pierce"],
+    "AttackType": ["Standard", "Fire"],
+    "Parryable": "False",
+    "StanceBreakable": "True",
+    "Critical": "True"
+}]
