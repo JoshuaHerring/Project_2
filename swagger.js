@@ -5,7 +5,7 @@ const doc = {
         title: "Elden Ring API",
         description:"Api of elden ring bosses and weapons"
     },
-    host: "localhost:8080",
+    host: "https://project-2-zf2s.onrender.com",
     schemes: ['http'],
 };
 
