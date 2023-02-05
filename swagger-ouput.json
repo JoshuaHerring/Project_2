@@ -5,10 +5,10 @@
     "description": "Api of elden ring bosses and weapons",
     "version": "1.0.0"
   },
-  "host": "https://project-2-zf2s.onrender.com",
+  "host": "project-2-zf2s.onrender.com",
   "basePath": "/",
   "schemes": [
-    "http"
+    "https"
   ],
   "paths": {
     "/bosses/": {
