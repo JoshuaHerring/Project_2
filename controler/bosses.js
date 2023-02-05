@@ -3,7 +3,7 @@ const {MongoClient} = require("mongodb");
 const ObjectId = require("mongodb").ObjectId;
 
 const getBosses = async (req, res) => {
-    // res.setHeader = ("Access-Control-Allow-Orogin", "*")
+    res.setHeader("Access-Control-Allow-Origin", "*");
     const client = new MongoClient(process.env.MONGODBURI);
 
     await client.connect();
@@ -14,6 +14,7 @@ const getBosses = async (req, res) => {
 }
 
 const getBoss = async (req, res) => {
+    res.setHeader("Access-Control-Allow-Origin", "*");
     const id = new ObjectId(req.params.id);
     const client = new MongoClient(process.env.MONGODBURI);
 
