@@ -6,7 +6,7 @@ const doc = {
         description:"Api of elden ring bosses and weapons"
     },
     host: "https://project-2-zf2s.onrender.com",
-    schemes: ['http'],
+    schemes: ['https'],
 };
 
 const outputFile = './swagger-ouput.json';
