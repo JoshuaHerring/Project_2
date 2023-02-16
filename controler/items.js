@@ -43,27 +43,25 @@ const getItem = async (req, res) => {
     }
 }
 
-const createBoss = async (req, res) => {
+const createItem = async (req, res) => {
     try{
-        if(!req.body.Name || !req.body.Strengths || !req.body.Weakneses || !req.body.AttackType || !req.body.Parryable || !req.body.StanceBreakable || !req.body.Critical)
+        if(!req.body.WeaponType || !req.body.Name || !req.body.AttackType || !req.body.Scaling || !req.body.Requires)
         {
             console.log("Pain")
             res.status(400).send({ message: 'Content can not be empty!' });
             return
         }
 
-        const boss = {
+        const item = {
+            WeaponType: req.body.WeaponType,
             Name: req.body.Name,
-            Strengths: req.body.Strengths,
-            Weakneses: req.body.Weakneses,
             AttackType: req.body.AttackType,
-            Parryable: req.body.Parryable,
-            StanceBreakable: req.body.StanceBreakable,
-            Critical: req.body.Critical
+            Scaling: req.body.Scaling,
+            Requires: req.body.Requires
         }
         
         const client = new MongoClient(process.env.MONGODBURI);
-        const response = await client.db("EldenRing").collection("Item").insertOne(boss);
+        const response = await client.db("EldenRing").collection("Item").insertOne(item);
         
         if (response.acknowledged){
             res.status(201).json(response);
@@ -78,7 +76,7 @@ const createBoss = async (req, res) => {
     }
 };
 
-const updateBoss = async (req, res) => {
+const updateItem = async (req, res) => {
     try{
         if(!req.body.Name || !req.body.Strengths || !req.body.Weakneses || !req.body.AttackType || !req.body.Parryable || !req.body.StanceBreakable || !req.body.Critical)
         {
@@ -116,7 +114,7 @@ const updateBoss = async (req, res) => {
 
 };
 
-const deleteBoss = async (req, res) => {
+const deleteItem = async (req, res) => {
     try{
 
         const id = new ObjectId(req.params.id);
@@ -145,4 +143,4 @@ const deleteBoss = async (req, res) => {
 };
 
 
-module.exports = {getItems, getItem, createBoss, updateBoss, deleteBoss}
+module.exports = {getItems, getItem, createItem, updateItem, deleteItem}

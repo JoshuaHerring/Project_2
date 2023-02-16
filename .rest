@@ -41,6 +41,31 @@ DELETE http://localhost:8080/bosses/63eadbd520f8c3ab711a1b50 HTTP/1.1
 ###
 Get http://localhost:8080/items HTTP/1.1
 
+###
+GET http://localhost:8080/items/63dd3feb31daee8566b8e07d HTTP/1.1
+
+###
+Post http://localhost:8080/items HTTP/1.1
+Content-Type:  application/json
+
+{
+    "WeaponType":"Swords",
+    "Name":"Sword",
+    "AttackType":{
+                    "Physical":"180",
+                    "Crit":"100"},
+    "Scaling":{
+                "Str":"C",
+                "Dex":"D"},
+    "Requires":{
+        "Str":"10",
+        "Dex":"7"
+    }
+}
+
+###
+DELETE http://localhost:8080/items/63eebeed56d4a105aedbcae9 HTTP/1.1
+
 
 # Routes for render
 
