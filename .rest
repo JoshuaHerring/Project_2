@@ -1,3 +1,5 @@
+// Boss Routes for local host
+
 Get http://localhost:8080/bosses HTTP/1.1
 
 ###
@@ -33,6 +35,11 @@ Content-Type: application/json
 
 ###
 DELETE http://localhost:8080/bosses/63eadbd520f8c3ab711a1b50 HTTP/1.1
+
+// Item Routes for Local Host
+
+###
+Get http://localhost:8080/items HTTP/1.1
 
 
 # Routes for render
