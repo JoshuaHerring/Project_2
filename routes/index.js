@@ -7,7 +7,7 @@ const config = {
   authRequired: false,
   auth0Logout: true,
   secret: 'a long, randomly-generated string stored in env',
-  baseURL: 'http://localhost:8080',
+  baseURL: 'https://project-2-zf2s.onrender.com',
   clientID: '63HKz9dd2Sr6w5VfP45rdUCHNnPgCRz0',
   issuerBaseURL: 'https://dev-wujcaylqmgympizc.us.auth0.com'
 };
