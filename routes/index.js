@@ -27,7 +27,7 @@ routes.get('/profile', requiresAuth(), (req, res) => {
 });
 
 
-routes.use("/bosses", requiresAuth(), require("./bosses"));
-routes.use("/items", requiresAuth(), require("./items.js"));
+routes.use("/bosses", /*requiresAuth(),*/ require("./bosses"));
+routes.use("/items", /*requiresAuth(),*/ require("./items.js"));
 
 module.exports = routes;
