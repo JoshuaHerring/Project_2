@@ -1,8 +1,9 @@
 function validate(password) {
-    let length = true
-    if (password.length < 7) length = false
+  let length = false;
 
-    return length
-    }
+  if (password.length > 7) length = true;
 
-module.exports = validate
+  return length
+}
+
+module.exports = validate;

@@ -1,4 +1,4 @@
-const routes = require("express").Router();
+const routes = require('express').Router();
 
 const { auth } = require('express-openid-connect');
 const { requiresAuth } = require('express-openid-connect');
@@ -26,8 +26,7 @@ routes.get('/profile', requiresAuth(), (req, res) => {
   res.send(JSON.stringify(req.oidc.user));
 });
 
-
-routes.use("/bosses", /*requiresAuth(),*/ require("./bosses"));
-routes.use("/items", /*requiresAuth(),*/ require("./items.js"));
+routes.use('/bosses', /*requiresAuth(),*/ require('./bosses'));
+routes.use('/items', /*requiresAuth(),*/ require('./items.js'));
 
 module.exports = routes;

@@ -7,9 +7,7 @@
   },
   "host": "project-2-zf2s.onrender.com",
   "basePath": "/",
-  "schemes": [
-    "https"
-  ],
+  "schemes": ["https"],
   "paths": {
     "/": {
       "get": {
